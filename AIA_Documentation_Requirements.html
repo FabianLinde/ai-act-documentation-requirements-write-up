@@ -72,6 +72,25 @@
       margin-bottom: 48px;
     }
 
+    .proposal-banner {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-top: 5px solid var(--accent);
+      border-radius: 0 0 4px 4px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 30px rgba(26,26,26,0.05);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .proposal-banner strong {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
     /* ── Section headings ── */
     .section-label {
       font-family: 'IBM Plex Mono', monospace;
@@ -519,6 +538,7 @@
     .ns-desc {
       font-size: 12px;
       color: var(--ink-muted);
+      flex: 1;
     }
  
     .ns-count {
@@ -526,7 +546,6 @@
       font-size: 11px;
       color: var(--ink-muted);
       margin-left: auto;
-      margin-right: 8px;
     }
  
     .concept-subsection {
@@ -885,9 +904,14 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 20px;
-      padding-top: 18px;
+      margin-top: 8px;
+      padding-top: 0;
+    }
+
+    .author-bar:first-of-type {
       border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 18px;
+      margin-top: 20px;
     }
 
     .author-name {
@@ -940,6 +964,15 @@
       <a class="author-link" href="https://orcid.org/0009-0004-0856-8036" target="_blank">ORCID</a>
       <a class="author-link" href="https://linkedin.com/in/fabianlinde" target="_blank">LinkedIn</a>
     </div>
+
+  </div>
+  <div class="author-bar">
+      <span class="author-name">Harshvardhan J. Pandit</span>
+      <div class="author-links">
+      <a class="author-link" href="https://orcid.org/0000-0002-5068-3714" target="_blank">ORCID</a>
+      <a class="author-link" href="https://harshp.com" target="_blank">Website</a>
+    </div>
+
   </div>
   <p class="funding-note">This research is funded by the European Union's Horizon 2020 programme under the Marie Skłodowska-Curie grant agreement No. 101169409 (<a href="https://harness-network.eu/index.html" target="_blank">HARNESS</a>).</p>
   </div>
@@ -948,6 +981,10 @@
 <main>
   <div class="container">
 
+    <div class="proposal-banner">
+      <strong>Note</strong>
+      This is a proposal to the Data Privacy Vocabularies and Controls Community Group (DPVCG).
+    </div>
 
     <!-- Motivation -->
     <section>
@@ -1257,7 +1294,6 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size:12px;color:var(--ink-muted);margin-top:8px;">ISO 42001 leads with the highest average score (1.06). DPV is second at 0.91.</p>
     </section>
 
    <!-- New DPV Concepts -->
@@ -1284,7 +1320,7 @@
       <div class="concept-namespaces">
  
         <!-- dpv: -->
-        <details class="ns-group">
+        <details class="ns-group" open>
           <summary class="ns-header">
             <span class="ns-label">dpv:</span>
             <span class="ns-desc">Data Privacy Vocabulary core</span>
@@ -1451,7 +1487,7 @@
         </details>
  
         <!-- eu-aiact: -->
-        <details class="ns-group">
+        <details class="ns-group" open>
           <summary class="ns-header">
             <span class="ns-label">eu-aiact:</span>
             <span class="ns-desc">EU AI Act extension</span>
@@ -1537,10 +1573,10 @@
         </details>
  
         <!-- ai: -->
-        <details class="ns-group">
+        <details class="ns-group" open>
           <summary class="ns-header">
             <span class="ns-label">ai:</span>
-            <span class="ns-desc">AI concepts</span>
+            <span class="ns-desc">AI extension</span>
             <span class="ns-count">5 classes · 1 property</span>
           </summary>
           <div class="concept-subsection">
@@ -1613,10 +1649,10 @@
         </details>
  
         <!-- tech: -->
-        <details class="ns-group">
+        <details class="ns-group" open>
           <summary class="ns-header">
             <span class="ns-label">tech:</span>
-            <span class="ns-desc">Technology concepts</span>
+            <span class="ns-desc">Technology extension</span>
             <span class="ns-count">4 classes · 9 properties</span>
           </summary>
           <div class="concept-subsection">
@@ -1745,10 +1781,10 @@
         </details>
 
         <!-- justifications: -->
-        <details class="ns-group">
+        <details class="ns-group" open>
           <summary class="ns-header">
             <span class="ns-label">justifications:</span>
-            <span class="ns-desc">Justification concepts</span>
+            <span class="ns-desc">Justifications extension</span>
             <span class="ns-count">1 class</span>
           </summary>
           <div class="concept-subsection">
@@ -1828,8 +1864,7 @@
     </section>
 
   </div>
-<main>
-  <div class="container">
+
 
 
 
