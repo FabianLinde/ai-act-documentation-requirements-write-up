@@ -988,7 +988,7 @@
 
     <!-- Motivation -->
     <section>
-      <div class="section-label">Motivation</div>
+      <div class="section-label">Background</div>
       <h2>Motivation</h2>
       <p>Translating legal mandates of the EU AI Act into technical workflows requires shifting from manual paperwork to digital governance. By mapping documentation requirements to formal semantic concepts, organizations benefit from a structured, machine-interpretable framework. This ensures machine-readability by transforming legal text into metadata artefacts. This enables automation (such as continuous compliance tracking, algorithmic auditing, and real-time policy enforcement across the AI lifecycle), as well as interoperability (by establishing a unified, vendor-agnostic vocabulary that allows diverse development pipelines, enterprise tools, and regulatory platforms to exchange data without losing context).</p>
     </section>
@@ -1151,6 +1151,15 @@
       <div class="section-label">Result</div>
       <h2>Documentation Requirements</h2>
 
+      <div class="dpv-block">
+        <div class="dpv-total-row">
+          <span class="dpv-num">285</span>
+          <span class="dpv-label">Documentation<br>requirements identified</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 1rem; margin-bottom: 1rem;">Documentation requirements have been grouped regarding whether they are of a technical or organisational nature, as well as regarding their level based on the taxonomy of transparency in AI in <a href="https://www.iso.org/standard/84111.html" target="_blank">ISO 12792</a>.</p>
+
       <div class="breakdown-grid">
         <!-- By type -->
         <div class="breakdown-group">
@@ -1207,14 +1216,35 @@
     <section>
       <div class="section-label">Result</div>
       <h2>Coverage by Documentation Format</h2>
+
+      <p style="margin-top: 1rem">Documentation requirements have been analysed regarding their coverage by different existing documentation formats.</p>
+      <p style="margin-bottom: 1rem;">For each documentation requirement and and each documentation format, the the coverage has been assessed qualitatively on a discrete scale from 0 to 2, where each score represents the following:</p>
+
+      <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #f5e6e6; border-left: 4px solid #d98080;">
+          <strong style="color: #a06060;">Score 0:</strong> Requirement not covered by the format
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #f5f5e6; border-left: 4px solid #d4aa40;">
+          <strong style="color: #9d8f40;">Score 1:</strong> Requirement partially covered or implicitly addressable
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #e6f5e6; border-left: 4px solid #60aa60;">
+          <strong style="color: #408040;">Score 2:</strong> Requirement fully or explicitly covered
+        </div>
+      </div>
+
+
+      <p style="margin-bottom: 1rem;">The following table shows how many documentation requirements received a score of 0, 1 and 2 for each documentation format: </p>
+
+
+    
       <div class="table-wrapper">
         <table>
           <thead>
             <tr>
               <th>Format</th>
-              <th>Score 0</th>
-              <th>Score 1</th>
-              <th>Score 2</th>
+              <th style="background-color: #f5e6e6;">Score 0</th>
+              <th style="background-color: #f5f5e6;">Score 1</th>
+              <th style="background-color: #e6f5e6;">Score 2</th>
               <th>Avg. Score</th>
             </tr>
           </thead>
@@ -1294,6 +1324,9 @@
           </tbody>
         </table>
       </div>
+
+      <p style="margin-top: 1rem;">This makes obvious that none of the existing documentation formats fully cover all the documentation required by the AI Act. ISO 42001 comes closest, but is not a machine-readable resource. Among semantic formats (MLDAT-AP, DPV, Croissant), DPV scores highest, and is therefore selected as the framework for the development of concepts to address this gap. </p>
+
     </section>
 
    <!-- New DPV Concepts -->
